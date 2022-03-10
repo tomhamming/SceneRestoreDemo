@@ -25,9 +25,7 @@ NSString * const kDetailSceneName = @"detail_type";
     if (!activity)
         activity = session.stateRestorationActivity;
     
-    UISceneActivationConditions *conditions = [[UISceneActivationConditions alloc] init];
-    conditions.canActivateForTargetContentIdentifierPredicate = [NSPredicate predicateWithValue:NO];
-    scene.activationConditions = conditions;
+    scene.activationConditions.canActivateForTargetContentIdentifierPredicate = [NSPredicate predicateWithValue:NO];
     
     NSLog(@"Detail scene will connect to session with activity: %@", activity.userInfo);
 }
